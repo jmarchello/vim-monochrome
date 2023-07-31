@@ -23,6 +23,7 @@ let s:sblue  = ['#778899', 67]
 let s:yellow = ['Yellow', 226]
 let s:red    = ['#b6403a', 160]
 let s:green  = ['#478226', 28]
+let s:purple   = ['#875fff', 99]
 
 let s:default_fg = s:lgray
 let s:default_bg = s:black
@@ -109,7 +110,15 @@ call s:hi('PmenuSel', s:sblue, s:white)
 call s:hi('Todo', s:black, s:yellow, s:bold)
 
 " Signs.
-call s:hi('SignColumn', s:default_bg, s:default_bg)
+call s:hi('SignColumn', s:default_fg, ['#000', 16])
+
+"
+" --- Git Signs ----------------------------------------------------------------
+"
+
+call s:hi('GitSignsAdd', s:green, ['#000', 16])
+call s:hi('GitSignsChange', s:purple, ['#000', 16])
+call s:hi('GitSignsDelete', s:red, ['#000', 16])
 
 "
 " --- Programming languages ----------------------------------------------------
